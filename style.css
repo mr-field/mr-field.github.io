@@ -1,0 +1,149 @@
+:root {
+    --fg-color: #eee;
+    --bg-color: #333;
+    --accent-color: #333;
+    --border-color: #333;
+    --card-bg-color: #ccc;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fg-color: #101417;
+        --bg-color: #9e9584;
+        --accent-color: #f78e66;
+        --border-color: #507386;
+        --card-bg-color: #101417;
+    }
+}
+
+
+@font-face {
+    font-family: "work-sans";
+    src: local("Work Sans"), url(./fonts/WorkSans-Regular.woff2);
+}
+
+@font-face {
+    font-family: "work-sans";
+    src: url(./fonts/WorkSans-Bold.woff2);
+    font-weight: bold;
+}
+
+
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "work-sans", sans-serif;
+    background-color: var(--fg-color);
+    color: var(--bg-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--accent-color);
+}
+
+hr {
+    border-color: var(--border-color);
+    background-color: var(--border-color);
+}
+
+p {
+    text-align: justify;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.content-box {
+    width: 75%;
+    max-width: 800px;
+}
+
+.photo-text {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5em;
+}
+
+.photo-text img {
+    margin-top: 0;
+}
+
+.photo-text p {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .photo-text {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+}
+
+.photo-text h1 {
+    margin: 0
+}
+
+.link-strip {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.link-strip a {
+    border: 0.1em solid var(--border-color);
+    padding: 0.5em;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+@media screen and (max-width: 700px) {
+    .link-strip {
+        flex-direction: column
+    }
+    
+    .link-strip a {
+        border-top: 0;
+    }
+    
+    .link-strip a:first-of-type {
+        border-top: 0.1em solid var(--border-color);
+    }
+}
+
+.link-strip a:hover {
+    background-color: var(--border-color);
+    color: var(--fg-color);
+}
+
+.card {
+    text-align: left;
+    padding: 0.5em;
+    background-color: var(--card-bg-color);
+    border: 0.1em solid var(--border-color);
+    margin-bottom: 1em;
+}
+
+.card h3 {
+    margin-top: 0;
+}

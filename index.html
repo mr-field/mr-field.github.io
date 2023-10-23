@@ -1,10 +1,78 @@
 <!DOCTYPE html>
 <html lang="en-GB">
     <head>
-        <title>Test</title>
-        <meta charset="UTF-8" />
+        <title>Meet Cosimo</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./style.css">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+        <link rel="manifest" href="./site.webmanifest">
+        <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        
+        <link href="./fontawesome/css/fontawesome.min.css" rel="stylesheet">
+        <link href="./fontawesome/css/brands.min.css" rel="stylesheet">
+        <link href="./fontawesome/css/solid.min.css" rel="stylesheet">
     </head>
     <body>
-        <h1>Hello world!</h1>
+        <div class="content-box">
+            <h1>Hi, I'm Cosimo</h1>
+            <div class="photo-text">
+                <img style="height: 8em; margin-right: 1em;" alt="Portrait photo showing Cosimo" src="./images/portrait.jpg">
+                <div>
+                    <p>
+                        I'm a full-stack software developer and AI engineer. I develop software in several different languages, mostly for web application backends but I've also worked with C++ desktop applications.
+                    </p>
+                    <p>
+                        Recently, I've moved more towards data science and machine learning by completing an AI for Biomedicine and Healthcare MSc at UCL.
+                    </p>
+                    <p>
+                        Follow me on any of the platforms linked below!
+                    </p>
+                </div>
+            </div>
+            <div class="link-strip">
+                <a href="https://github.com/mr-field"><i class="fa-brands fa-github"></i> Github</a>
+                <a href="https://www.linkedin.com/in/cosimocampo/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.instagram.com/cosimo.campo/"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=100008635626635"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="mailto:cosimo@cosimocampo.dev"><i class="fa-solid fa-envelope"></i> Email</a>
+            </div>
+            <hr>
+            <h2>My work</h2>
+            <div class="card">
+                <h3>MSc project: Deep Learning for automated perfusion deficiency detection in patients at risk of stroke</h3>
+                <p>
+                    For my final AI for Biomedicine and Healthcare MSc project, I created a neural network for automatically analysing <a href="https://en.wikipedia.org/wiki/Arterial_spin_labelling">ASL MRI</a> scans. This type of MRI produces images showing blood flow in a patient's brain. In patients with <a href="https://en.wikipedia.org/wiki/Carotid_artery_stenosis">carotid stenosis</a>, a significant impairment in blood flow can indicate a high risk of stroke. Therefore, the project's goal was to automatically assign a rating to each brain region in an ASL scan to measure the "blood flow quality" within that region, which could then be used to choose the best treatment for a patient.
+                </p>
+                <p>
+                    The classifier was implemented as a <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">CNN</a> using <a href="https://www.tensorflow.org/">Tensorflow</a>. Its final AUC was high at 0.85, but analysis of saliency maps showed that most patterns used for classification were spurious. This was largely due to the extremely small size of the dataset (only 50 patients), but the same approach could have worked with a larger dataset.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Web development and DevOps at STFC</h3>
+                <p>
+                    I spent several years as a software engineer at <a href="https://www.ukri.org/councils/stfc/">STFC</a>, as part of the Computing group for the <a href="https://www.isis.stfc.ac.uk/">ISIS neutron source</a>. My work focused on the web applications and services used to coordinate experiments and operations at the accelerator. Together with the rest of the team, I was responsible for developing and maintaining a wide range of applications written in several languages (mostly Java, C# and TypeScript). I also maintained and improved the platform used to run these services, implementing a new Kubernetes-based infrastructure and workflow for hosting them in containers. As one of the longest-serving team members, I also supervised and inducted more junior staff in the team.
+                </p>
+            </div>
+            <div class="card">
+                <h3>BSc project: Creating a graphics engine from scratch</h3>
+                <div class="photo-text">
+                    <div>
+                        <p>
+                            For my final Computer Science BSc project, I created a 3D graphics engine. It was a strange combination of a realtime game engine and a raytracing library. It provided methods to set up a 3D scene either by generating primitives or by importing an OBJ file. The scene could then be rendered using a realtime OpenGL-based renderer or a photorealistic raytracer.
+                        </p>
+                        <p>
+                            The engine was written in C++, using no external libraries aside from OpenGL and its glue code.
+                        </p>
+                    </div>
+                    <img style="height: 7em; margin-left: 1em;" alt="Sample image rendered with the raytracer" src="./images/fp3d-sample.png">
+                </div>
+                <i class="fa-brands fa-github"></i> <a href="https://github.com/mr-field/FP3D">Project repo</a>
+            </div>
+        </div>
     </body>
 </html>
